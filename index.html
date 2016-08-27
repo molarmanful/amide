@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>AMIDE</title>
+<style>
+  #t{
+    width:100%;
+    font-family:monospace;
+  }
+  #o{
+    text-align:center;
+  }
+</style>
+<textarea id="t" rows="5"></textarea><a id="p" target="_blank">
+<button>Permalink</button></a>
+<p id="o">`lim_(x->oo)8/(5x^2)`</p>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_SVG"></script>
+<script>
+MathJax.Hub.Config({
+  SVG:{
+    font:'STIX-Web'
+  }
+})
+t.oninput=x=>{
+  MathJax.Hub.queue.Push(["Text",MathJax.Hub.getAllJax("o")[0],t.value])
+  p.href=location.origin+location.pathname+'?'+encodeURIComponent(t.value)
+}
+location.search.replace(/\?/g,'')&&(o.innerText=`\`${decodeURIComponent(location.search.slice(1))}\``,t.outerHTML='',p.outerHTML='')
+</script>
