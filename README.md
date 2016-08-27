@@ -1,2 +1,2 @@
-# amide
-A personal ASCIIMath IDE.
+# AMIDE
+**A**SCII**M**ath **IDE**. Made for personal use.
