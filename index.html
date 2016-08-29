@@ -20,9 +20,9 @@ MathJax.Hub.Config({
     font:'STIX-Web'
   }
 })
-t.oninput=x=>{
+t.oninput=function(){
   MathJax.Hub.queue.Push(["Text",MathJax.Hub.getAllJax("o")[0],t.value])
   p.href=location.origin+location.pathname+'?'+encodeURIComponent(t.value)
 }
-location.search.replace(/\?/g,'')&&(o.innerText=`\`${decodeURIComponent(location.search.slice(1))}\``,t.outerHTML='',p.outerHTML='')
+location.search.replace(/\?/g,'')&&(o.innerText='`'+decodeURIComponent(location.search.slice(1))+'`',t.outerHTML='',p.outerHTML='')
 </script>
